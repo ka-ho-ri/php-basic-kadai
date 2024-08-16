@@ -16,11 +16,11 @@
 
             public function __construct(string $name,int $price){
                 $this->name = $name;
-                $this->prise = $price;
+                $this->price = $price;
             }
 
-            public function show_price(int $price){
-                echo $price .'<br>';
+            public function show_price(){
+                echo $this->price .'<br>';
             }
         }
 
@@ -35,22 +35,22 @@
                 $this->weight = $weight;
             }
 
-            public function show_height(int $height){
-                echo $height.'<br>';
+            public function show_height(){
+                echo $this->height.'<br>';
             }
         }
 
-        $food = new Food('ニンジン',100);
+        $food = new Food('potato',250);
         print_r($food);
         echo '<br>';
 
-        $animal = new Animal('ウサギ',50,70);
+        $animal = new Animal('dog',60,5000);
         print_r($animal);
         echo '<br>';
 
 
-        $food->show_price(100);
-        $animal->show_height(70);
+        $food->show_price();
+        $animal->show_height();
 
         ?>
     </p>
